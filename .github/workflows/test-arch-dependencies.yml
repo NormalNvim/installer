@@ -1,0 +1,20 @@
+name: Test arch dependencies
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-script:
+    name: Run Script
+    runs-on: archlinux
+
+    steps:
+      - name: Install paru
+        run: |
+          sudo pacman -Sy --noconfirm base-devel
+          git clone https://aur.archlinux.org/paru.git
+          cd paru
+          makepkg -si --noconfirm
+
+      - name: Test dependencies
+        run: ./test-arch-dependencies.sh
