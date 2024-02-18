@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# NormalNvim test to check if all arch linux dependencies still exist.
+# NormalNvim test to check if all arch linux AUR dependencies still exist.
 
 
 
@@ -9,15 +9,16 @@
 # -----------------------------------------------------------------------------
 
 #######################################
-# Given a dependency name, check if it exist on the AUR.
+# Given a dependency name, check if it exists on the AUR.
 # Suitable for GitHub actions, as we don't actually install them.
 #######################################
 check_dependency() {
-    local package_name="$1"
-    if ! pacman -Ssq --quiet "^$package_name$"; then
-        echo "Package '$package_name' not found in the AUR."
-        return 1
-    fi
+  local package_name="$1"
+  if ! paru -Qsq --quiet "^$package_name$" >/dev/null 2>&1; then
+    return 1
+  else
+    return 0
+  fi
 }
 
 #######################################
@@ -33,15 +34,32 @@ check_dependency() {
 #
 # Returns:
 #    0: if all of them exist.
-#    1: if at least one of them do not exist.
+#    1: if at least one of them does not exist.
 #######################################
 check_dependencies() {
-    local dependencies=("$@")
+  local dependencies=("$@")
+  local missing_packages=()
 
-    for dependency in "${dependencies[@]}"; do
-        check_package_existence "$dependency" || return 1
-    done
+  for dependency in "${dependencies[@]}"; do
+    if ! check_dependency "$dependency"; then
+      missing_packages+=("$dependency")
+    fi
+  done
+
+  if [ ${#missing_packages[@]} -gt 0 ]; then
+    echo "ERROR: Some packages were not found in the AUR."
+    printf '%s\n' "${missing_packages[@]}"
+    return 1
+  else
+    printf '%s\n' "${dependencies[@]}"
+    return 0
+  fi
+
 }
+
+
+
+
 
 
 # CHECK DEPENDENCIES
