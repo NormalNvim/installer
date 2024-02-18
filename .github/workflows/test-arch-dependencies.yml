@@ -17,4 +17,4 @@ jobs:
           makepkg -si --noconfirm
 
       - name: Test dependencies
-        run: ./test-arch-dependencies.sh
+        run: ./tests/test-arch-dependencies.sh
