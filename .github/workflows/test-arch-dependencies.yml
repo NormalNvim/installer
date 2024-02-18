@@ -2,10 +2,6 @@ name: Test arch dependencies
 
 on:
   workflow_dispatch:
-    inputs:
-      branch:
-        description: 'By default, use the main branch.'
-        default: 'main'
 
 jobs:
   run-script:
