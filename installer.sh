@@ -20,6 +20,7 @@ IS_NIXOS=$(if [ -d /etc/nixos ] && [ -f /etc/os-release ] && grep -q "NAME=\"Nix
 
 ## INSTALL NormalNvim
 ###############################################################################
+echo
 echo "Welcome to NormalNvim!"
 echo "=================================================================="
 echo "This installer will ask you for confirmation on every step before:"
@@ -35,8 +36,8 @@ echo
 echo "Step 1: Cloning NormalNvim on ~/.config/nvim"
 echo "------------------------------------------------------------------"
 if [ -d ~/.config/nvim ]; then
-  echo "ERROR: The directory '~/.config/nvim' already exist. "\
-    "Please move it to a different location before installing NormalNvim."
+  echo "ERROR: The directory ~/.config/nvim already exist."
+  echo "       Please move it to a different location before installing."
   exit 1
 fi
 echo "INFO: Installing NormalNvim in '~/.config/nvim'"
