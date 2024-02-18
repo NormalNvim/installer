@@ -1,4 +1,4 @@
-name: Test arch dependencies
+name: Test arch dependencies. Note that GitHub action don not currently support archlinux and this action will stay queued forever without a clear error.
 
 on:
   workflow_dispatch:
