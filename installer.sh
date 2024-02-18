@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 #
 # NormalNvim installer.
-# Supports: Arch, Ubuntu, MacOS, Termux
+# Supports: Arch, Ubuntu, MacOS, Termux, WSL
 
 
 # Detect OS
