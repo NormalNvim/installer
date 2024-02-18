@@ -12,3 +12,10 @@ It would help us a lot if you can send the PR directly.
 
 ## Note from the author
 We try to support as many distros as possible, but we only own arch Linux machines. We need your help in order to make NormalNvim a great experience for everyone.
+
+## Roadmap
+
+* Arch github action
+* Ubuntu github action
+* Termux github action
+* MacOS github action
