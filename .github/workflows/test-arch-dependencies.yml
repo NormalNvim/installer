@@ -9,5 +9,5 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Test dependencies
+      - name: Test arch dependencies
         run: ./tests/test-arch-dependencies.sh
