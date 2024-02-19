@@ -40,9 +40,9 @@ printf '\n\n\n\n'
 
 
 
-echo "----------------------------"
+echo "--------------------------"
 echo "Compiler.nvim dependencies"
-echo "----------------------------"
+echo "--------------------------"
 # ubuntu
 echo "- Ubuntu packages -"
 dependencies=(
@@ -92,9 +92,9 @@ check_snap_dependencies "${dependencies[@]}" || exit 1
 # wget https://swift.org/builds/swift-5.5-release/ubuntu2004/swift-5.5-RELEASE/swift-5.5-RELEASE-ubuntu20.04.tar.gz && tar -xzf swift-5.5-RELEASE-ubuntu20.04.tar.gz && sudo mv swift-5.5-RELEASE-ubuntu20.04 /opt/swift && export PATH=/opt/swift/usr/bin:"${PATH}"
 printf '\n\n\n\n'
 
-echo "------------------------"
+echo "-----------------------"
 echo "Dooku.nvim dependencies"
-echo "------------------------"
+echo "-----------------------"
 # pacman
 echo "- Pacman packages -"
 dependencies=(
@@ -121,9 +121,9 @@ printf '\n\n\n\n'
 
 
 
-echo "----------------------------------------"
-echo "SUCCESS: All dependencies are available"
-echo "----------------------------------------"
+echo "-------------------------------"
+echo "SUCCESS: All deps are available"
+echo "-------------------------------"
 
 
 

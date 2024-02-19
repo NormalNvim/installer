@@ -45,9 +45,9 @@ printf '\n\n\n\n'
 
 
 
-echo "----------------------------"
+echo "--------------------------"
 echo "Compiler.nvim dependencies"
-echo "----------------------------"
+echo "--------------------------"
 # pacman
 echo "- Pacman packages -"
 dependencies=(
@@ -87,9 +87,9 @@ printf '\n\n\n\n'
 
 
 
-echo "------------------------"
+echo "-----------------------"
 echo "Dooku.nvim dependencies"
-echo "------------------------"
+echo "-----------------------"
 # pacman
 echo "- Pacman packages -"
 dependencies=(
@@ -116,6 +116,6 @@ printf '\n\n\n\n'
 
 
 
-echo "----------------------------------------"
-echo "SUCCESS: All dependencies are available"
-echo "----------------------------------------"
+echo "-------------------------------"
+echo "SUCCESS: All deps are available"
+echo "-------------------------------"
