@@ -4,15 +4,24 @@ on:
   workflow_dispatch:
 
 jobs:
-  run-script:
-    name: Run Script
+  test-arch-dependencies:
+    name: Test Arch Dependencies
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2  # This step checks out your repository so that files are available for subsequent steps.
+        uses: actions/checkout@v2
     
-      - name: Test dependencies
-        run: |
-          ./tests/test-arch-dependencies.sh &
-          ./tests/test-ubuntu-dependencies.sh
+      - name: Test arch dependencies
+        run: ./tests/test-arch-dependencies.sh
+
+  test-ubuntu-dependencies:
+    name: Test Ubuntu Dependencies
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+    
+      - name: Test ubuntu dependencies
+        run: ./tests/test-ubuntu-dependencies.sh
