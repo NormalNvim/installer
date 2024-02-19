@@ -10,9 +10,9 @@ source "$(dirname "$0")/test-utils.sh" # Functions to check packages
 # CHECK DEPENDENCIES
 # -----------------------------------------------------------------------------
 
-echo "------------------------"
-echo "NormalNvim dependencies"
-echo "------------------------"
+echo "------------------------------------"
+echo "NormalNvim dependencies - Arch Linux"
+echo "------------------------------------"
 # pacman
 echo "- Pacman packages -"
 dependencies=(
@@ -31,7 +31,6 @@ check_arch_dependencies "${dependencies[@]}" || exit 1
 printf '\n%s\n' "- NPM packages -"
 dependencies=(
     "jest"
-    "typedoc"
 )
 check_npm_dependencies "${dependencies[@]}" || exit 1
 
@@ -41,8 +40,10 @@ dependencies=(
     "cargo-nextest"
 )
 check_cargo_dependencies "${dependencies[@]}" || exit 1
-
 printf '\n\n\n\n'
+
+
+
 
 echo "----------------------------"
 echo "Compiler.nvim dependencies"
