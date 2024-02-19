@@ -115,7 +115,7 @@ if [ -z "$answer_lowercase" ] || [ "$answer_lowercase" = "y" ] || [ "$answer_low
     # INSTALL DEPENDENCIES
     # --------------------
     if [ -n "$AUR_CMD" ]; then
-      "$AUR_CMD" -S --needed ranger-git python-pynvim fd git-delta grcov rustup yarn python-pytest dotnet-sdk swift-bin && yarn global add jest typedoc jdoc && cargo install cargo-nextest && "$AUR_CMD" -S --needed mingw-w64 dotnet-runtime dotnet-sdk aspnet-runtime-bin mono jdk-openjdk dart kotlin elixir npm nodejs typescript make go nasm r nuitka pyinstaller python ruby perl lua doxygen && go install golang.org/x/tools/cmd/godoc@latest
+      "$AUR_CMD" -S --needed ranger-git python-pynvim fd git-delta grcov rustup yarn python-pytest dotnet-sdk swift-bin && yarn global add jest typedoc jdoc && cargo install cargo-nextest && "$AUR_CMD" -S --needed mingw-w64-gcc dotnet-runtime dotnet-sdk aspnet-runtime-bin mono jdk-openjdk dart kotlin elixir npm nodejs typescript make go nasm r nuitka pyinstaller python ruby perl lua doxygen && go install golang.org/x/tools/cmd/godoc@latest
     else
       echo "ERROR: You must have 'paru' or 'yay' installed so we can use the AUR."
     fi
