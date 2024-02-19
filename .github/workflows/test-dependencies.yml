@@ -12,8 +12,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2  # This step checks out your repository so that files are available for subsequent steps.
     
-      - name: Test arch dependencies
-        run: ./tests/test-arch-dependencies.sh
-
-      - name: Test ubuntu dependencies
-        run: ./tests/test-ubuntu-dependencies.sh
+      - name: Test dependencies
+        run: |
+          ./tests/test-arch-dependencies.sh &
+          ./tests/test-ubuntu-dependencies.sh
