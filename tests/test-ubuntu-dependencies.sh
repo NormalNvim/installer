@@ -12,9 +12,9 @@ source "$(dirname "$0")/test-utils.sh" # Functions to check packages
 # -----------------------------------------------------------------------------
 
 
-echo "------------------------------------"
+echo "--------------------------------"
 echo "NormalNvim dependencies - Ubuntu"
-echo "------------------------------------"
+echo "--------------------------------"
 # ubuntu
 echo "- Ubuntu packages -"
 dependencies=(
