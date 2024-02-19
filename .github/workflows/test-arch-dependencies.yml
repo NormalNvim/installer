@@ -14,3 +14,6 @@ jobs:
     
       - name: Test arch dependencies
         run: ./tests/test-arch-dependencies.sh
+
+      - name: Test ubuntu dependencies
+        run: ./tests/test-ubuntu-dependencies.sh
