@@ -1,4 +1,4 @@
-name: Test arch dependencies. Note that GitHub action do not currently support archlinux and this action will stay queued forever without a clear error.
+name: Test arch dependencies.
 
 on:
   workflow_dispatch:
@@ -6,15 +6,8 @@ on:
 jobs:
   run-script:
     name: Run Script
-    runs-on: archlinux
+    runs-on: ubuntu-latest
 
     steps:
-      - name: Install paru
-        run: |
-          sudo pacman -Sy --noconfirm base-devel
-          git clone https://aur.archlinux.org/paru.git
-          cd paru
-          makepkg -si --noconfirm
-
       - name: Test dependencies
         run: ./tests/test-arch-dependencies.sh
