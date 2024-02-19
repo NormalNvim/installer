@@ -1,4 +1,4 @@
-name: Test arch dependencies.
+name: Test arch dependencies
 
 on:
   workflow_dispatch:
