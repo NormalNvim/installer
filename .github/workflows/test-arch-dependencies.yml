@@ -10,4 +10,4 @@ jobs:
 
     steps:
       - name: Test arch dependencies
-        run: ./tests/test-arch-dependencies.sh
+        run: /tests/test-arch-dependencies.sh
