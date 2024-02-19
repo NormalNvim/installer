@@ -9,5 +9,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2  # This step checks out your repository so that files are available for subsequent steps.
+    
       - name: Test arch dependencies
-        run: /tests/test-arch-dependencies.sh
+        run: ./tests/test-arch-dependencies.sh
