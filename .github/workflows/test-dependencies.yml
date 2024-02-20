@@ -25,3 +25,15 @@ jobs:
     
       - name: Test ubuntu dependencies
         run: ./tests/test-ubuntu-dependencies.sh
+
+  test-macos-dependencies:
+    name: Test MacOS Dependencies
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+    
+      - name: Test ubuntu dependencies
+        run: ./tests/test-macos-dependencies.sh
+        
