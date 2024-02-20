@@ -34,6 +34,6 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
     
-      - name: Test ubuntu dependencies
+      - name: Test macos dependencies
         run: ./tests/test-macos-dependencies.sh
         
