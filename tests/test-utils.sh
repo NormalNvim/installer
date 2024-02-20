@@ -203,6 +203,52 @@ check_termux_dependencies() {
 
 #######################################
 # Check if a list of packages exist
+# in MacOS homebrew
+#######################################
+check_homebrew_dependencies() {
+  error_flag=0 # 0 means no error
+
+  # Iterate over each package name in the array
+  for package_name in "$@"; do
+    local url="https://formulae.brew.sh/formula/$package_name"
+
+    # Check if the package exists in MacOS homebrew
+    if [ "$(curl -s -o /dev/null -w "%{http_code}" "$url")" -eq 200 ]; then
+      echo "$package_name"
+    else
+      echo "$package_name → ERROR: It doesn't exist in MacOS homebrew"
+      error_flag=1
+    fi
+  done
+
+  return "$error_flag"
+}
+
+#######################################
+# Check if a list of packages exist
+# in MacOS homebrew cask
+#######################################
+check_homebrew_cask_dependencies() {
+  error_flag=0 # 0 means no error
+
+  # Iterate over each package name in the array
+  for package_name in "$@"; do
+    local url="https://formulae.brew.sh/cask/$package_name"
+
+    # Check if the package exists in MacOS homebrew
+    if [ "$(curl -s -o /dev/null -w "%{http_code}" "$url")" -eq 200 ]; then
+      echo "$package_name"
+    else
+      echo "$package_name → ERROR: It doesn't exist in MacOS homebrew cask"
+      error_flag=1
+    fi
+  done
+
+  return "$error_flag"
+}
+
+#######################################
+# Check if a list of packages exist
 # in Fedora
 #######################################
 check_fedora_dependencies() {
