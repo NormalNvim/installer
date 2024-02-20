@@ -96,11 +96,11 @@ echo "-----------------------"
 echo "Dooku.nvim dependencies"
 echo "-----------------------"
 # homebrew
-echo "- Pacman packages -"
+echo "- homebrew packages -"
 dependencies=(
     "doxygen"
 )
-check_homebrew_dependenciess "${dependencies[@]}" || exit 1
+check_homebrew_dependencies "${dependencies[@]}" || exit 1
 
 # npm
 printf '\n%s\n' "- NPM packages -"
