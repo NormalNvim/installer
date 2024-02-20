@@ -179,21 +179,43 @@ check_ubuntu_dependencies() {
 # Check if a list of packages exist
 # in Termux
 #######################################
-# BUG: The search engine return similar terms.
-#      For example if we look for python and it doesn't exist but python-lol does,
-#      it will return 200
+# You can also manually check if a package exist on
+# https://repology.org/projects/?search=$package_name&inrepo=termux
 check_termux_dependencies() {
   error_flag=0 # 0 means no error
 
   # Iterate over each package name in the array
   for package_name in "$@"; do
-    local url="https://repology.org/projects/?search=$package_name&inrepo=termux"
+    local url="https://github.com/termux/termux-packages/tree/master/packages/$package_name"
 
     # Check if the package exists in Termux
     if [ "$(curl -s -o /dev/null -w "%{http_code}" "$url")" -eq 200 ]; then
       echo "$package_name"
     else
       echo "$package_name → ERROR: It doesn't exist in Termux"
+      error_flag=1
+    fi
+  done
+
+  return "$error_flag"
+}
+
+#######################################
+# Check if a list of packages exist
+# in Termux User Repository (TUR)
+#######################################
+check_tur_dependencies() {
+  error_flag=0 # 0 means no error
+
+  # Iterate over each package name in the array
+  for package_name in "$@"; do
+    local url="https://github.com/termux-user-repository/tur/tree/master/tur/$package_name"
+
+    # Check if the package exists in Termux
+    if [ "$(curl -s -o /dev/null -w "%{http_code}" "$url")" -eq 200 ]; then
+      echo "$package_name"
+    else
+      echo "$package_name → ERROR: It doesn't exist in Termux (TUR)"
       error_flag=1
     fi
   done
