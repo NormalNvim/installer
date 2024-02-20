@@ -79,7 +79,7 @@ check_arch_dependencies "${dependencies[@]}" || exit 1
 printf '\n%s\n' "- AUR packages -"
 dependencies=(
     "pyinstaller"
-    "swift-bin"
+    "swift-language"
 )
 check_aur_dependencies "${dependencies[@]}" || exit 1
 printf '\n\n\n\n'
