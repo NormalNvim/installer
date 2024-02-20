@@ -95,7 +95,7 @@ echo
 echo "Step 3: Install system dependencies (optional)"
 echo "------------------------------------------------------------------"
 printf "Do you want to install the dependencies? [Y/n]"
-read answer
+read -r answer
 answer_lowercase=$(echo "$answer" | tr '[:upper:]' '[:lower:]')
 if [ -z "$answer_lowercase" ] || [ "$answer_lowercase" = "y" ] || [ "$answer_lowercase" = "yes" ]; then
 
@@ -109,13 +109,13 @@ if [ -z "$answer_lowercase" ] || [ "$answer_lowercase" = "y" ] || [ "$answer_low
 
     # DETECT AUR CLIENT
     # -----------------
-    if command -v paru > /dev/null 2>&1; then AUR_CMD="paru";
-    elif command -v yay > /dev/null 2>&1; then AUR_CMD="yay"; fi
+    if command -v paru > /dev/null 2>&1; then AUR_CMD="paru -S --needed";
+    elif command -v yay > /dev/null 2>&1; then AUR_CMD="yay -S --needed"; fi
 
     # INSTALL DEPENDENCIES
     # --------------------
     if [ -n "$AUR_CMD" ]; then
-      "$AUR_CMD" -S --needed ranger-git python-pynvim fd git-delta grcov rustup yarn python-pytest dotnet-sdk swift-bin && yarn global add jest typedoc jdoc && cargo install cargo-nextest && "$AUR_CMD" -S --needed mingw-w64-gcc dotnet-runtime dotnet-sdk aspnet-runtime-bin mono jdk-openjdk dart kotlin elixir npm nodejs typescript make go nasm r nuitka pyinstaller python ruby perl lua doxygen && go install golang.org/x/tools/cmd/godoc@latest
+      "$AUR_CMD" "python" "python-pynvim" "fd" "git-delta" "grcov" "rustup" "yarn" "python-pytest" "mingw-w64-gcc" "dotnet-runtime" "dotnet-sdk" "aspnet-runtime" "mono" "jdk-openjdk" "dart" "kotlin" "elixir" "npm" "nodejs" "typescript" "make" "go" "nasm" "r" "nuitka" "python" "ruby" "perl" "lua" "pyinstaller" "swift-bin" "doxygen" && yarn global add "jest" "jsdoc" "typedoc" && cargo install "cargo-nextest" && go install "golang.org/x/tools/cmd/godoc@latest"
     else
       echo "ERROR: You must have 'paru' or 'yay' installed so we can use the AUR."
     fi
@@ -127,7 +127,7 @@ if [ -z "$answer_lowercase" ] || [ "$answer_lowercase" = "y" ] || [ "$answer_low
   #############################################################################
   elif [ "$IS_UBUNTU" = "true" ]; then
     echo "Ubuntu detected."
-    sudo apt update && sudo apt install yarn ranger fd-find && pip install pynvim pytest && yarn add global jest typedoc jdoc && curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh && cargo install git-delta grcov && wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh && chmod +x ./dotnet-install.sh && ./dotnet-install.sh && rm -f ./dotnet-install.sh && sudo apt install mingw-w64 dotnet-sdk-7.0 mono-complete default-jdk nasm r-base rustc golang-go python ruby perl lua5.3 kotlin elixir make nodejs npm doxygen && sudo npm install -g typescript && pip install pyinstaller && pip install nuitka && go install golang.org/x/tools/cmd/godoc@latest && sudo snap install dart flutter --classic && wget https://swift.org/builds/swift-5.5-release/ubuntu2004/swift-5.5-RELEASE/swift-5.5-RELEASE-ubuntu20.04.tar.gz && tar -xzf swift-5.5-RELEASE-ubuntu20.04.tar.gz && sudo mv swift-5.5-RELEASE-ubuntu20.04 /opt/swift && export PATH=/opt/swift/usr/bin:"${PATH}"
+    sudo apt update && sudo apt install --install-if-missing "yarn" "ranger" "rust-fd-find" "python-pynvim" "python-pytest" "delta" "rust-grcov" "rustup" "mingw-w64" "dotnet8" "monodevelop" "java-common" "nasm" "r-base" "rustc" "golang" "python" "ruby" "perl" "lua5.3" "kotlin" "elixir" "make" "nodejs" "npm" "node-typescript" "nuitka" && yarn global add "jest" && go install "golang.org/x/tools/cmd/godoc@latest" && sudo snap install --classic "dart" "flutter"
 
 
 
@@ -141,7 +141,7 @@ if [ -z "$answer_lowercase" ] || [ "$answer_lowercase" = "y" ] || [ "$answer_low
 
 
 
-  # IS_TERMUX (dependencies)
+  # TERMUX INSTALLER (dependencies)
   #############################################################################
   elif [ "$IS_TERMUX" = "true" ]; then
     echo "Termux detected."
