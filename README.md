@@ -9,7 +9,7 @@ Shell script to install NormalNvim in a single step.
 * ~~Termux (currently wip)~~
 
 ## Supported GitHub actions
-The fact a installer has a GitHub action, mean the installer is very stable. If any dependency cease to exist on the repositories of a distro, we will inmediatelly know.
+The fact a installer has a GitHub action, mean the installer is very stable; If any dependency cease to exist on the repositories of a distro, we will inmediatelly know.
 
 * Arch
 * Ubuntu
