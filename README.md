@@ -20,4 +20,3 @@ The fact a installer has a GitHub action, mean the installer is very stable; If 
 I've been working on this for a week and I'm a bit burned up, so let's re-visit adding support for the remaining operative systems in the future.
 
 * Fedora github action
-* NixOS github action
