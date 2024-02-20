@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# NormalNvim test to check if all arch linux AUR dependencies still exist.
+# NormalNvim test to check if all arch linux dependencies still exist.
 
 
 # Imports
