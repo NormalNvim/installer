@@ -47,3 +47,14 @@ jobs:
     
       - name: Test macos dependencies
         run: ./tests/test-termux-dependencies.sh
+
+  test-fedora-dependencies:
+    name: Test Fedora Dependencies
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+    
+      - name: Test macos dependencies
+        run: ./tests/test-fedora-dependencies.sh        
