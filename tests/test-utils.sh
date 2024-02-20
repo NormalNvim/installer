@@ -294,30 +294,6 @@ check_fedora_dependencies() {
 
 #######################################
 # Check if a list of packages exist
-# in NixOS
-#######################################
-# BUG: The search engine return similar terms.
-#      For example if we look for python and it doesn't exist but python-lol does,
-#      it will return 200
-check_nixos_dependencies() {
-  # Iterate over each package name in the array
-  for package_name in "$@"; do
-    local url="https://search.nixos.org/packages?query=$package_name/"
-
-    # Check if the package exists in NixOS
-    if [ "$(curl -s -o /dev/null -w "%{http_code}" "$url")" -eq 200 ]; then
-      echo "$package_name"
-    else
-      echo "$package_name → ERROR: It doesn't exist in NixOS"
-      error_flag=1
-    fi
-  done
-
-  return "$error_flag"
-}
-
-#######################################
-# Check if a list of packages exist
 # in Snapcraft
 #######################################
 check_snap_dependencies() {

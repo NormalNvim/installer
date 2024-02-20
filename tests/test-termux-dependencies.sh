@@ -86,20 +86,9 @@ check_tur_dependencies "${dependencies[@]}" || exit 1
 # python
 printf '\n%s\n' "- Python packages -"
 dependencies=(
-    "pynvim"
-    "pytest"
     "Nuitka"
 )
 check_python_dependencies "${dependencies[@]}" || exit 1
-
-# aur
-printf '\n%s\n' "- AUR packages -"
-dependencies=(
-    "pyinstaller"
-    "swift-language"
-)
-check_aur_dependencies "${dependencies[@]}" || exit 1
-printf '\n\n\n\n'
 
 printf '\n%s\n' "- Python packages -"
 dependencies=(

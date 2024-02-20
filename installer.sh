@@ -136,7 +136,7 @@ if [ -z "$answer_lowercase" ] || [ "$answer_lowercase" = "y" ] || [ "$answer_low
   #############################################################################
   elif [ "$IS_MACOS" = "true" ]; then
     echo "MacOS detected."
-    sudo brew install "fd" "git-delta" "rustup-init" "yarn" "mingw-w64" "dotnet" "mono" "openjdk" "dart-sdk" "kotlin" "elixir" "node" "typescript" "make" "rust" "go" "nasm" "r" "ruby" "perl" "lua" "swift" "pyinstaller" "doxygen"; sudo brew install --cask "dotnet-sdk" "flutter"; pip install "pynvim" "pytest" "Nuitka"; yarn add global "jest" "jsdoc" "typedoc"; cargo install "cargo-nextest" "grcov"; go install "golang.org/x/tools/cmd/godoc@latest"
+    sudo brew install "ranger" "fd" "git-delta" "rustup-init" "yarn" "mingw-w64" "dotnet" "mono" "openjdk" "dart-sdk" "kotlin" "elixir" "node" "typescript" "make" "rust" "go" "nasm" "r" "ruby" "perl" "lua" "swift" "pyinstaller" "doxygen"; sudo brew install --cask "dotnet-sdk" "flutter"; pip install "pynvim" "pytest" "Nuitka"; yarn add global "jest" "jsdoc" "typedoc"; cargo install "cargo-nextest" "grcov"; go install "golang.org/x/tools/cmd/godoc@latest"
 
 
 
@@ -145,7 +145,7 @@ if [ -z "$answer_lowercase" ] || [ "$answer_lowercase" = "y" ] || [ "$answer_low
   #############################################################################
   elif [ "$IS_TERMUX" = "true" ]; then
     echo "Termux detected."
-    pkg install -y clang ranger binutils fd yarn rust swift && pip install pynvim pytest nuitka pyinstaller && yarn add global jest typedoc jdoc && pkg install -y dotnet-sdk mono openjdk-17 kotlin rust golang nasm python ruby perl lua53 dart nodejs elixir make doxygen && npm install -g typescript && go install golang.org/x/tools/cmd/godoc@latest && cargo install git-delta grcov
+    pkg update; pkg install "tur-repo"; pkg install "ranger" "python" "fd" "git-delta" "yarn" "mono" "openjdk-17" "dart" "kotlin" "elixir" "nodejs" "make" "rust" "golang" "nasm" "python" "ruby" "perl" "liblua52" "swift" "binutils-libs" "gcc-default" "doxygen"; pip install "pynvim" "pytest" "Nuitka"; yarn add global "jest" "typescript" "jsdoc" "typedoc"; cargo install "cargo-nextest" "git-delta" "grcov"; go install "golang.org/x/tools/cmd/godoc@latest"
 
 
 
