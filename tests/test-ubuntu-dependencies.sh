@@ -71,6 +71,7 @@ check_ubuntu_dependencies "${dependencies[@]}" || exit 1
 # snap
 printf '\n%s\n' "- Snap packages -"
 dependencies=(
+    "dart"
     "flutter"
 )
 check_snap_dependencies "${dependencies[@]}" || exit 1
@@ -82,10 +83,6 @@ check_snap_dependencies "${dependencies[@]}" || exit 1
 # )
 # check_python_dependencies "${dependencies[@]}" || exit 1
 
-# You can install dart (but we won't)
-# wget -qO- https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo gpg  --dearmor -o /usr/share/keyrings/dart.gpg
-# echo 'deb [signed-by=/usr/share/keyrings/dart.gpg arch=amd64] https://storage.googleapis.com/download.dartlang.org/linux/debian stable main' | sudo tee /etc/apt/sources.list.d/dart_stable.list
-# sudo apt-get update && sudo apt-get install dart
 
 # You can install flutter (but we won't)
 # sudo snap install dart flutter --classic
