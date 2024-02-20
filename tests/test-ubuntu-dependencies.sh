@@ -86,10 +86,6 @@ check_python_dependencies "${dependencies[@]}" || exit 1
 # wget -qO- https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo gpg  --dearmor -o /usr/share/keyrings/dart.gpg
 # echo 'deb [signed-by=/usr/share/keyrings/dart.gpg arch=amd64] https://storage.googleapis.com/download.dartlang.org/linux/debian stable main' | sudo tee /etc/apt/sources.list.d/dart_stable.list
 # sudo apt-get update && sudo apt-get install dart
-
-# You can install flutter (but we won't)
-# sudo snap install dart flutter --classic
-# wget https://swift.org/builds/swift-5.5-release/ubuntu2004/swift-5.5-RELEASE/swift-5.5-RELEASE-ubuntu20.04.tar.gz && tar -xzf swift-5.5-RELEASE-ubuntu20.04.tar.gz && sudo mv swift-5.5-RELEASE-ubuntu20.04 /opt/swift && export PATH=/opt/swift/usr/bin:"${PATH}"
 printf '\n\n\n\n'
 
 echo "-----------------------"

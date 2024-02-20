@@ -15,6 +15,7 @@ echo "-------------------------------"
 # homebrew
 echo "- Homebrew packages -"
 dependencies=(
+    "ranger"
     "fd"
     "git-delta"
     "rustup-init"
