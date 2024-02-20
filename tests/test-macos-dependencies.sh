@@ -66,6 +66,7 @@ dependencies=(
     "typescript"
     "make"
     "go"
+    "rust"
     "nasm"
     "r"
     "ruby"
@@ -86,7 +87,7 @@ check_homebrew_cask_dependencies "${dependencies[@]}" || exit 1
 # python
 printf '\n%s\n' "- Python packages -"
 dependencies=(
-    "Nuitka"
+    "Nuitka" # Will probably provoke a warning on MacOS, since PEP 688
 )
 check_python_dependencies "${dependencies[@]}" || exit 1
 printf '\n\n\n\n'
