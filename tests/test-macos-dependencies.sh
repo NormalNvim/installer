@@ -76,8 +76,10 @@ dependencies=(
 )
 check_homebrew_dependencies "${dependencies[@]}" || exit 1
 
+# homebrew cask
 dependencies=(
     "dotnet-sdk"
+    "flutter"
 )
 check_homebrew_cask_dependencies "${dependencies[@]}" || exit 1
 
