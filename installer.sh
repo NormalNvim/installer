@@ -115,7 +115,7 @@ if [ -z "$answer_lowercase" ] || [ "$answer_lowercase" = "y" ] || [ "$answer_low
     # INSTALL DEPENDENCIES
     # --------------------
     if [ -n "$AUR_CMD" ]; then
-      "$AUR_CMD" "python" "python-pynvim" "fd" "git-delta" "grcov" "rustup" "yarn" "python-pytest" "mingw-w64-gcc" "dotnet-runtime" "dotnet-sdk" "aspnet-runtime" "mono" "jdk-openjdk" "dart" "kotlin" "elixir" "npm" "nodejs" "typescript" "make" "go" "nasm" "r" "nuitka" "python" "ruby" "perl" "lua" "pyinstaller" "swift-bin" "doxygen" && yarn global add "jest" "jsdoc" "typedoc" && cargo install "cargo-nextest" && go install "golang.org/x/tools/cmd/godoc@latest"
+      "$AUR_CMD" "python" "python-pynvim" "fd" "git-delta" "grcov" "rustup" "yarn" "python-pytest" "mingw-w64-gcc" "dotnet-runtime" "dotnet-sdk" "aspnet-runtime" "mono" "jdk-openjdk" "dart" "kotlin" "elixir" "npm" "nodejs" "typescript" "make" "go" "nasm" "r" "nuitka" "python" "ruby" "perl" "lua" "pyinstaller" "swift-bin" "doxygen"; yarn global add "jest" "jsdoc" "typedoc"; cargo install "cargo-nextest"; go install "golang.org/x/tools/cmd/godoc@latest"
     else
       echo "ERROR: You must have 'paru' or 'yay' installed so we can use the AUR."
     fi
@@ -127,7 +127,7 @@ if [ -z "$answer_lowercase" ] || [ "$answer_lowercase" = "y" ] || [ "$answer_low
   #############################################################################
   elif [ "$IS_UBUNTU" = "true" ]; then
     echo "Ubuntu detected."
-    sudo apt update && sudo apt install --install-if-missing "yarn" "ranger" "rust-fd-find" "python-pynvim" "python-pytest" "delta" "rust-grcov" "rustup" "mingw-w64" "dotnet8" "monodevelop" "java-common" "nasm" "r-base" "rustc" "golang" "python" "ruby" "perl" "lua5.3" "kotlin" "elixir" "make" "nodejs" "npm" "node-typescript" "nuitka" && yarn global add "jest" && go install "golang.org/x/tools/cmd/godoc@latest" && sudo snap install --classic "dart" "flutter"
+    sudo apt update; sudo apt install --install-if-missing "yarn" "ranger" "rust-fd-find" "python-pynvim" "python-pytest" "delta" "rust-grcov" "rustup" "mingw-w64" "dotnet8" "monodevelop" "java-common" "nasm" "r-base" "rustc" "golang" "python" "ruby" "perl" "lua5.3" "kotlin" "elixir" "make" "nodejs" "npm" "node-typescript" "nuitka"; yarn global add "jest" "jsdoc" "typedoc"; go install "golang.org/x/tools/cmd/godoc@latest"; sudo snap install --classic "flutter"
 
 
 
@@ -136,7 +136,7 @@ if [ -z "$answer_lowercase" ] || [ "$answer_lowercase" = "y" ] || [ "$answer_low
   #############################################################################
   elif [ "$IS_MACOS" = "true" ]; then
     echo "MacOS detected."
-    brew tap dart-lang/dart flutter/flutter homebrew/cask && brew install rustup-init yarn ranger pynvim pytest fd rip-delta && cargo install grcov && yarn add global jest typedoc jdoc && brew install --cask dotnet-sdk flutter && brew install mingw-w64 dotnet mono openjdk rust go nasm r pyinstaller python perl lua dart kotlin elixir node typescript swift make doxygen && pip install nuitka && go install golang.org/x/tools/cmd/godoc@latest
+    brew install "fd" "git-delta" "rustup-init" "yarn" "mingw-w64" "dotnet" "mono" "openjdk" "dart-sdk" "kotlin" "elixir" "node" "typescript" "make" "go" "nasm" "r" "ruby" "perl" "lua" "swift" "pyinstaller" "doxygen"; brew install --cask "dotnet-sdk" "flutter"; pip install "pynvim" "pytest" "Nuitka"; yarn add global "jest" "jsdoc" "typedoc"; cargo install "cargo-nextest" "grcov"; go install "golang.org/x/tools/cmd/godoc@latest"
 
 
 
