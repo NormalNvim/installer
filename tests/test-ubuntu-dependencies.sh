@@ -76,11 +76,11 @@ dependencies=(
 check_snap_dependencies "${dependencies[@]}" || exit 1
 
 # python
-# printf '\n%s\n' "- Python packages -"
-# dependencies=(
-#     "pyinstaller" # Will provoke a warning on ubuntu, since PEP 711
-# )
-# check_python_dependencies "${dependencies[@]}" || exit 1
+printf '\n%s\n' "- Python packages -"
+dependencies=(
+    "pyinstaller" # Will probably provoke a warning on ubuntu, since PEP 688
+)
+check_python_dependencies "${dependencies[@]}" || exit 1
 
 # You can install dart (but we won't)
 # wget -qO- https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo gpg  --dearmor -o /usr/share/keyrings/dart.gpg
