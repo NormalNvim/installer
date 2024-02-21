@@ -5,6 +5,7 @@ Shell script to install NormalNvim in a single step.
 
 * Arch based Linux distros
 * Ubuntu based Linux distros
+* Fedora based Linux distros
 * MacOS (homebrew)
 * Termux
 
@@ -15,9 +16,4 @@ The fact a installer has a GitHub action, mean the installer is very stable; If 
 * Ubuntu
 * MacOs
 * Termux
-
-## Roadmap
-
-I've been working on this for a week and I'm a bit burned up, so let's re-visit adding support for the remaining operative systems in the future.
-
-* Fedora github action
+* Fedora
