@@ -12,8 +12,8 @@ Shell script to install NormalNvim in a single step.
 ## Supported GitHub actions
 The fact a installer has a GitHub action, mean the installer is very stable; If any dependency cease to exist on the repositories of a distro, we will inmediatelly know.
 
-* Arch
-* Ubuntu
-* MacOs
-* Termux
-* Fedora
+* [Arch](https://github.com/NormalNvim/installer/blob/main/tests/test-arch-dependencies.sh)
+* [Ubuntu](https://github.com/NormalNvim/installer/blob/main/tests/test-ubuntu-dependencies.sh)
+* [MacOs](https://github.com/NormalNvim/installer/blob/main/tests/test-macos-dependencies.sh)
+* [Termux](https://github.com/NormalNvim/installer/blob/main/tests/test-termux-dependencies.sh)
+* [Fedora](https://github.com/NormalNvim/installer/blob/main/tests/test-fedora-dependencies.sh)
