@@ -127,7 +127,7 @@ if [ -z "$answer_lowercase" ] || [ "$answer_lowercase" = "y" ] || [ "$answer_low
   #############################################################################
   elif [ "$IS_UBUNTU" = "true" ]; then
     echo "Ubuntu detected."
-    sudo apt update; sudo apt install --install-if-missing "yarn" "ranger" "rust-fd-find" "python-pynvim" "python-pytest" "delta" "rust-grcov" "rustup" "mingw-w64" "dotnet8" "monodevelop" "java-common" "nasm" "r-base" "rustc" "golang" "python" "ruby" "perl" "lua5.3" "kotlin" "elixir" "make" "nodejs" "npm" "node-typescript" "nuitka"; yarn global add "jest" "jsdoc" "typedoc"; go install "golang.org/x/tools/cmd/godoc@latest"; sudo snap install --classic "flutter"
+    sudo apt update; sudo apt install --install-if-missing "yarn" "ranger" "rust-fd-find" "python-pynvim" "python-pytest" "delta" "rust-grcov" "rustup" "mingw-w64" "dotnet8" "monodevelop" "java-common" "nasm" "r-base" "rustc" "golang" "python" "ruby" "perl" "lua5.3" "kotlin" "elixir" "make" "nodejs" "npm" "node-typescript" "nuitka"; pip install "pyinstaller"; yarn global add "jest" "jsdoc" "typedoc"; go install "golang.org/x/tools/cmd/godoc@latest"; sudo snap install --classic "flutter"
 
 
 
@@ -145,7 +145,16 @@ if [ -z "$answer_lowercase" ] || [ "$answer_lowercase" = "y" ] || [ "$answer_low
   #############################################################################
   elif [ "$IS_TERMUX" = "true" ]; then
     echo "Termux detected."
-    pkg update; pkg install "tur-repo"; pkg install "ranger" "python" "fd" "git-delta" "yarn" "mono" "openjdk-17" "dart" "kotlin" "elixir" "nodejs" "make" "rust" "golang" "nasm" "python" "ruby" "perl" "liblua52" "swift" "binutils-libs" "gcc-default" "doxygen"; pip install "pynvim" "pytest" "Nuitka"; yarn add global "jest" "typescript" "jsdoc" "typedoc"; cargo install "cargo-nextest" "git-delta" "grcov"; go install "golang.org/x/tools/cmd/godoc@latest"
+    pkg update; pkg install "tur-repo"; pkg install "ranger" "python" "fd" "git-delta" "yarn" "mono" "openjdk-17" "dart" "kotlin" "elixir" "nodejs" "make" "rust" "golang" "nasm" "python" "ruby" "perl" "liblua52" "swift" "binutils-libs" "gcc-default" "doxygen"; pip install "pynvim" "pytest" "Nuitka" "pyinstaller"; yarn add global "jest" "typescript" "jsdoc" "typedoc"; cargo install "cargo-nextest" "git-delta" "grcov"; go install "golang.org/x/tools/cmd/godoc@latest"
+
+
+
+
+  # FEDORA INSTALLER (dependencies)
+  #############################################################################
+  elif [ "$IS_FEDORA" = "true" ]; then
+    echo "Fedora detected."
+    sudo dnf install "rust-fd-find" "rust-git-delta" "rustup" "python3-pytest" "mingw64-gcc" "binutils" "dotnet6.0" "dotnet-runtime-6.0" "dotnet-sdk-6.0" "aspnetcore-runtime-6.0" "mono-complete" "java-21-openjdk" "elixir" "nodejs" "npm" "typescript" "make" "golang" "nasm" "R-rlang" "ruby" "perl" "lua" "swift-lang"; pip install "pynvim" "pytest" "Nuitka" "pyinstaller"; npm install -g "yarn" "jest" "typescript" "jsdoc" "typedoc"; cargo install "cargo-nextest" "grcov"; go install "golang.org/x/tools/cmd/godoc@latest"
 
 
 
@@ -153,7 +162,7 @@ if [ -z "$answer_lowercase" ] || [ "$answer_lowercase" = "y" ] || [ "$answer_low
   # ERROR: OS NOT DETECTED
   #############################################################################
   else
-    echo "ERROR: It seems your OS is not Arch Linux, Ubuntu, MacOS or Termux."
+    echo "ERROR: It seems your OS is not Arch Linux, Ubuntu, MacOS, Termux, or Fedora."
     echo "Your OS is not directly supported."
     echo "But you can still read the wiki and install the dependencies manually."
   fi
