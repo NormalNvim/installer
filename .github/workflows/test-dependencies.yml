@@ -1,7 +1,9 @@
 name: Test dependencies
 
 on:
-  workflow_dispatch:
+  workflow_dispatch:     # Allow running it manually.
+  schedule:
+    - cron: '0 0 * * *'  # Run daily at midnight UTC
 
 jobs:
   test-arch-dependencies:
