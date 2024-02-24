@@ -78,7 +78,7 @@ if [ -n "$github_username" ]; then
   echo "------------------------------------------------------------------"
 else
   echo "------------------------------------------------------------------"
-  echo "SKIPPED: No GitHub username provided. You will get updated from:"
+  echo "SKIPPED: No GitHub username provided. You will get updates from:"
   echo "         git://github.com/NormalNvim/NormalNvim.git"
   echo "------------------------------------------------------------------"
 fi
