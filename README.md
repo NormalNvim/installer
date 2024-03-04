@@ -23,4 +23,4 @@ The fact a installer has a GitHub action, mean the installer is very stable; If 
 * Click the action.
 * Click the test of your operative system.
 
-And check what dependency is failing.
+And check if there is any dependency that doesn't exist anymore. If you send a PR since you are on it, that would be great.
