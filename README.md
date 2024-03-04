@@ -17,3 +17,10 @@ The fact a installer has a GitHub action, mean the installer is very stable; If 
 * [MacOs](https://github.com/NormalNvim/installer/blob/main/tests/test-macos-dependencies.sh)
 * [Termux](https://github.com/NormalNvim/installer/blob/main/tests/test-termux-dependencies.sh)
 * [Fedora](https://github.com/NormalNvim/installer/blob/main/tests/test-fedora-dependencies.sh)
+
+## What to do if a dependency fail to install
+* Go into [actions](https://github.com/NormalNvim/installer/actions).
+* Click the action.
+* Click the test of your operative system.
+
+And check what dependency is failing.
