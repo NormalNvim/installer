@@ -20,7 +20,7 @@ The fact a installer has a GitHub action, mean the installer is very stable; If 
 
 ## What to do if a dependency fail to install
 * Go into [actions](https://github.com/NormalNvim/installer/actions).
-* Click the action.
+* Click the most recent one.
 * Click the test of your operative system.
 
 And check if there is any dependency that doesn't exist anymore. If you send a PR since you are on it, that would be great.
