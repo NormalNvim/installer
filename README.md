@@ -24,3 +24,7 @@ The fact a installer has a GitHub action, mean the installer is very stable; If 
 * Click the test of your operative system.
 
 And check if there is any dependency that doesn't exist anymore. If you send us a PR since you are on it, everyone will benefit from it.
+
+## Roadmap
+* We currently support the package names shipped with the latest stable release of all distros, but as new versions are released, we could version the installer (ubuntu 22.04, etc).
+* A (probably) easier alternative would be to distribute NormalNvim as flatpak. That would ensure a optimal user experience on any system.
