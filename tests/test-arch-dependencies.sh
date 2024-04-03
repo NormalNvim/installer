@@ -94,6 +94,8 @@ echo "-----------------------"
 echo "- Pacman packages -"
 dependencies=(
     "doxygen"
+    "ldoc"
+    "ruby-yard"
 )
 check_arch_dependencies "${dependencies[@]}" || exit 1
 

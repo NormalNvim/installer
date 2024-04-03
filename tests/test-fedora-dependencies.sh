@@ -98,6 +98,8 @@ echo "-----------------------"
 echo "- Fedora packages -"
 dependencies=(
     "doxygen"
+    "lua-ldoc"
+    "rubygem-yard"
 )
 check_fedora_dependencies "${dependencies[@]}" || exit 1
 

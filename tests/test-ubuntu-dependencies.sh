@@ -95,6 +95,7 @@ echo "-----------------------"
 echo "- Pacman packages -"
 dependencies=(
     "doxygen"
+    "yard"
 )
 check_ubuntu_dependencies "${dependencies[@]}" || exit 1
 

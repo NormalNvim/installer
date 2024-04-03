@@ -115,7 +115,7 @@ if [ -z "$answer_lowercase" ] || [ "$answer_lowercase" = "y" ] || [ "$answer_low
     # INSTALL DEPENDENCIES
     # --------------------
     if [ -n "$AUR_CMD" ]; then
-      "$AUR_CMD" "python" "python-pynvim" "fd" "git-delta" "grcov" "rustup" "yarn" "python-pytest" "mingw-w64-gcc" "dotnet-runtime" "dotnet-sdk" "aspnet-runtime" "mono" "jdk-openjdk" "dart" "kotlin" "elixir" "npm" "nodejs" "typescript" "make" "go" "nasm" "r" "nuitka" "python" "ruby" "perl" "lua" "pyinstaller" "swift-bin" "doxygen"; yarn global add "jest" "jsdoc" "typedoc"; cargo install "cargo-nextest"; go install "golang.org/x/tools/cmd/godoc@latest"
+      "$AUR_CMD" "python" "python-pynvim" "fd" "git-delta" "grcov" "rustup" "yarn" "python-pytest" "mingw-w64-gcc" "dotnet-runtime" "dotnet-sdk" "aspnet-runtime" "mono" "jdk-openjdk" "dart" "kotlin" "elixir" "npm" "nodejs" "typescript" "make" "go" "nasm" "r" "nuitka" "python" "ruby" "perl" "lua" "pyinstaller" "swift-bin" "doxygen" "ldoc" "ruby-yard"; yarn global add "jest" "jsdoc" "typedoc"; cargo install "cargo-nextest"; go install "golang.org/x/tools/cmd/godoc@latest"
     else
       echo "ERROR: You must have 'paru' or 'yay' installed so we can use the AUR."
     fi
@@ -127,7 +127,7 @@ if [ -z "$answer_lowercase" ] || [ "$answer_lowercase" = "y" ] || [ "$answer_low
   #############################################################################
   elif [ "$IS_UBUNTU" = "true" ]; then
     echo "Ubuntu detected."
-    sudo apt update; sudo apt install --install-if-missing "yarn" "ranger" "rust-fd-find" "python-pynvim" "python-pytest" "delta" "rust-grcov" "rustup" "mingw-w64" "dotnet8" "monodevelop" "java-common" "nasm" "r-base" "rustc" "golang" "python" "ruby" "perl" "lua5.3" "kotlin" "elixir" "make" "nodejs" "npm" "node-typescript" "nuitka"; pip install "pyinstaller"; yarn global add "jest" "jsdoc" "typedoc"; go install "golang.org/x/tools/cmd/godoc@latest"; sudo snap install --classic "flutter"
+    sudo apt update; sudo apt install --install-if-missing "yarn" "ranger" "rust-fd-find" "python-pynvim" "python-pytest" "delta" "rust-grcov" "rustup" "mingw-w64" "dotnet8" "monodevelop" "java-common" "nasm" "r-base" "rustc" "golang" "python" "ruby" "perl" "lua5.3" "kotlin" "elixir" "make" "nodejs" "npm" "node-typescript" "nuitka" "doxygen" "yard"; pip install "pyinstaller"; yarn global add "jest" "jsdoc" "typedoc"; go install "golang.org/x/tools/cmd/godoc@latest"; sudo snap install --classic "flutter"
 
 
 
@@ -154,7 +154,7 @@ if [ -z "$answer_lowercase" ] || [ "$answer_lowercase" = "y" ] || [ "$answer_low
   #############################################################################
   elif [ "$IS_FEDORA" = "true" ]; then
     echo "Fedora detected."
-    sudo dnf install "rust-fd-find" "rust-git-delta" "rustup" "python3-pytest" "mingw64-gcc" "binutils" "dotnet6.0" "dotnet-runtime-6.0" "dotnet-sdk-6.0" "aspnetcore-runtime-6.0" "mono-complete" "java-21-openjdk" "elixir" "nodejs" "npm" "typescript" "make" "golang" "nasm" "R-rlang" "ruby" "perl" "lua" "swift-lang"; pip install "pynvim" "pytest" "Nuitka" "pyinstaller"; npm install -g "yarn" "jest" "typescript" "jsdoc" "typedoc"; cargo install "cargo-nextest" "grcov"; go install "golang.org/x/tools/cmd/godoc@latest"
+    sudo dnf install "rust-fd-find" "rust-git-delta" "rustup" "python3-pytest" "mingw64-gcc" "binutils" "dotnet6.0" "dotnet-runtime-6.0" "dotnet-sdk-6.0" "aspnetcore-runtime-6.0" "mono-complete" "java-21-openjdk" "elixir" "nodejs" "npm" "typescript" "make" "golang" "nasm" "R-rlang" "ruby" "perl" "lua" "swift-lang" "doxygen" "lua-ldoc" "rubygem-yard"; pip install "pynvim" "pytest" "Nuitka" "pyinstaller"; npm install -g "yarn" "jest" "typescript" "jsdoc" "typedoc"; cargo install "cargo-nextest" "grcov"; go install "golang.org/x/tools/cmd/godoc@latest"
 
 
 
