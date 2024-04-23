@@ -67,7 +67,6 @@ dependencies=(
     "go"
     "nasm"
     "r"
-    "nuitka"
     "python"
     "ruby"
     "perl"
@@ -79,6 +78,7 @@ check_arch_dependencies "${dependencies[@]}" || exit 1
 printf '\n%s\n' "- AUR packages -"
 dependencies=(
     "pyinstaller"
+    "nuitka"
     "swift-language"
 )
 check_aur_dependencies "${dependencies[@]}" || exit 1
