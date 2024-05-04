@@ -9,10 +9,10 @@ IS_ARCH=$(if [ -f /etc/os-release ] && grep -q "NAME=\"Arch Linux\"" /etc/os-rel
 IS_UBUNTU=$(if [ -f /etc/os-release ] && grep -q "NAME=\"Ubuntu\"" /etc/os-release; then echo "true"; else echo "false"; fi)
 IS_MACOS=$(if [ -d /Applications ] && [ -d /System ]; then echo "true"; else echo "false"; fi)
 IS_TERMUX=$(if [ -x "$(command -v pkg)" ] && [ -d "$HOME/.termux" ]; then echo "true"; else echo "false"; fi)
+IS_FEDORA=$(if [ -f /etc/fedora-release ]; then echo "true"; else echo "false"; fi)
 
 # Currently unused
 IS_WSL=$(if grep -q Microsoft /proc/version; then echo "true"; else echo "false"; fi)
-IS_FEDORA=$(if [ -f /etc/fedora-release ]; then echo "true"; else echo "false"; fi)
 IS_NIXOS=$(if [ -d /etc/nixos ] && [ -f /etc/os-release ] && grep -q "NAME=\"NixOS\"" /etc/os-release; then echo "true"; else echo "false"; fi)
 
 
