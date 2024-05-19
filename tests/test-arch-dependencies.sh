@@ -57,7 +57,6 @@ dependencies=(
     "aspnet-runtime"
     "mono"
     "jdk-openjdk"
-    "dart"
     "kotlin"
     "elixir"
     "npm"
@@ -80,6 +79,7 @@ dependencies=(
     "pyinstaller"
     "nuitka"
     "swift-language"
+    "flutter-bin"
 )
 check_aur_dependencies "${dependencies[@]}" || exit 1
 printf '\n\n\n\n'
