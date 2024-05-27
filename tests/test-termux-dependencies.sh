@@ -79,7 +79,7 @@ check_termux_dependencies "${dependencies[@]}" || exit 1
 
 echo "- Termux packages (TUR) -"
 dependencies=(
-    "gcc-default" # instead of mingw (we don't need to target multiple OS)
+    "gcc-default" # Has gfortran
 )
 check_tur_dependencies "${dependencies[@]}" || exit 1
 

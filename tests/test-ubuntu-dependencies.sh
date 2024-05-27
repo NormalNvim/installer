@@ -46,7 +46,8 @@ echo "--------------------------"
 # ubuntu
 echo "- Ubuntu packages -"
 dependencies=(
-    "mingw-w64"
+    "gcc-defaults" # has gfortran
+    "binutils" # contains ld (as we don't use mingw)
     "dotnet8"
     "monodevelop"
     "java-common" # default-jdk

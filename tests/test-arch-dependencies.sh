@@ -51,7 +51,8 @@ echo "--------------------------"
 # pacman
 echo "- Pacman packages -"
 dependencies=(
-    "mingw-w64-gcc" # includes mingw-w64-bintools whish has 'ld'
+    "gcc"
+    "binutils" # contains ld (as we don't use mingw)
     "dotnet-runtime"
     "dotnet-sdk"
     "aspnet-runtime"
@@ -80,6 +81,7 @@ dependencies=(
     "nuitka"
     "swift-language"
     "flutter-bin"
+    "fortran-fpm-bin"
 )
 check_aur_dependencies "${dependencies[@]}" || exit 1
 printf '\n\n\n\n'

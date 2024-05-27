@@ -56,8 +56,9 @@ echo "--------------------------"
 # homebrew
 echo "- Homebrew packages -"
 dependencies=(
-    "mingw-w64" # Warning: It might not include 'ld'.
-    "dotnet"    # runtime
+    "gcc" # has gfortran
+    "binutils" # contains ld (as we don't use mingw)
+    "dotnet" # runtime
     "mono"
     "openjdk"
     "dart-sdk"
@@ -82,6 +83,7 @@ check_homebrew_dependencies "${dependencies[@]}" || exit 1
 dependencies=(
     "dotnet-sdk"
     "flutter"
+    "simply-fortran"
 )
 check_homebrew_cask_dependencies "${dependencies[@]}" || exit 1
 

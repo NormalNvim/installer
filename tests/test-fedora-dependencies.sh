@@ -56,7 +56,7 @@ echo "--------------------------"
 # fedora
 echo "- Fedora packages -"
 dependencies=(
-    "mingw-gcc/mingw64-gcc"
+    "gcc/gcc"
     "binutils/binutils"  # includes ld
     "dotnet6.0/dotnet"
     "dotnet6.0/dotnet-runtime-6.0"
@@ -76,6 +76,7 @@ dependencies=(
     "perl/perl"
     "lua/lua"
     "swift-lang/swift-lang"
+    "gcc/gcc-gfortran"
 )
 check_fedora_dependencies "${dependencies[@]}" || exit 1
 
