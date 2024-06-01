@@ -71,6 +71,7 @@ dependencies=(
     "ruby"
     "perl"
     "lua"
+    "gcc-fortran"
 )
 check_arch_dependencies "${dependencies[@]}" || exit 1
 
