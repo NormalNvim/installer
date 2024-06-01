@@ -83,7 +83,6 @@ check_homebrew_dependencies "${dependencies[@]}" || exit 1
 dependencies=(
     "dotnet-sdk"
     "flutter"
-    "simply-fortran"
 )
 check_homebrew_cask_dependencies "${dependencies[@]}" || exit 1
 
