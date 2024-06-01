@@ -115,7 +115,7 @@ if [ -z "$answer_lowercase" ] || [ "$answer_lowercase" = "y" ] || [ "$answer_low
     # INSTALL DEPENDENCIES
     # --------------------
     if [ -n "$AUR_CMD" ]; then
-      "$AUR_CMD" "python" "python-pynvim" "fd" "git-delta" "grcov" "rustup" "yarn" "python-pytest" "gcc" "binutils" "dotnet-runtime" "dotnet-sdk" "aspnet-runtime" "mono" "jdk-openjdk" "kotlin" "elixir" "npm" "nodejs" "typescript" "make" "go" "nasm" "r" "nuitka" "python" "ruby" "perl" "lua" "pyinstaller" "swift-bin" "flutter-bin" "doxygen" "ldoc" "ruby-yard"; yarn global add "jest" "jsdoc" "typedoc"; cargo install "cargo-nextest"; go install "golang.org/x/tools/cmd/godoc@latest"
+      "$AUR_CMD" "python" "python-pynvim" "fd" "git-delta" "grcov" "rustup" "yarn" "python-pytest" "gcc" "binutils" "dotnet-runtime" "dotnet-sdk" "aspnet-runtime" "mono" "jdk-openjdk" "kotlin" "elixir" "npm" "nodejs" "typescript" "make" "go" "nasm" "r" "nuitka" "python" "ruby" "perl" "lua" "pyinstaller" "swift-bin" "flutter-bin" "gcc-fortran" "fortran-fpm-bin" "doxygen" "ldoc" "ruby-yard"; yarn global add "jest" "jsdoc" "typedoc"; cargo install "cargo-nextest"; go install "golang.org/x/tools/cmd/godoc@latest"
     else
       echo "ERROR: You must have 'paru' or 'yay' installed so we can use the AUR."
     fi
@@ -154,7 +154,7 @@ if [ -z "$answer_lowercase" ] || [ "$answer_lowercase" = "y" ] || [ "$answer_low
   #############################################################################
   elif [ "$IS_FEDORA" = "true" ]; then
     echo "Fedora detected."
-    sudo dnf install "rust-fd-find" "rust-git-delta" "rustup" "python3-pytest" "gcc" "binutils" "gcc-gfortran" "dotnet6.0" "dotnet-runtime-6.0" "dotnet-sdk-6.0" "aspnetcore-runtime-6.0" "mono-complete" "java-21-openjdk" "elixir" "nodejs" "npm" "typescript" "make" "golang" "nasm" "R-rlang" "ruby" "perl" "lua" "swift-lang" "doxygen" "lua-ldoc" "rubygem-yard"; pip install "pynvim" "pytest" "Nuitka" "pyinstaller"; npm install -g "yarn" "jest" "typescript" "jsdoc" "typedoc"; cargo install "cargo-nextest" "grcov"; go install "golang.org/x/tools/cmd/godoc@latest"
+    sudo dnf install "rust-fd-find" "rust-git-delta" "rustup" "python3-pytest" "gcc" "binutils" "dotnet6.0" "dotnet-runtime-6.0" "dotnet-sdk-6.0" "aspnetcore-runtime-6.0" "mono-complete" "java-21-openjdk" "elixir" "nodejs" "npm" "typescript" "make" "golang" "nasm" "R-rlang" "ruby" "perl" "lua" "swift-lang" "gcc-gfortran" "doxygen" "lua-ldoc" "rubygem-yard"; pip install "pynvim" "pytest" "Nuitka" "pyinstaller"; npm install -g "yarn" "jest" "typescript" "jsdoc" "typedoc"; cargo install "cargo-nextest" "grcov"; go install "golang.org/x/tools/cmd/godoc@latest"
 
 
 
