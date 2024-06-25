@@ -18,6 +18,7 @@ echo "--------------------------------"
 # ubuntu
 echo "- Ubuntu packages -"
 dependencies=(
+    "luarocks"
     "yarn"
     "ranger"
     "rust-fd-find"

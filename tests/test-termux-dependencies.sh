@@ -16,8 +16,9 @@ echo "--------------------------------"
 echo "- Termux packages -"
 dependencies=(
     "tur-repo" # This enable the termux user repository
-    "ranger"
+    "luarocks"
     "python"
+    "ranger"
     "fd"
     "git-delta"
     "yarn"

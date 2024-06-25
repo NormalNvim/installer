@@ -16,8 +16,10 @@ echo "------------------------------------"
 # pacman
 echo "- Pacman packages -"
 dependencies=(
+    "luarocks"
     "python"
     "python-pynvim"
+    "ranger"
     "fd"
     "git-delta"
     "grcov"

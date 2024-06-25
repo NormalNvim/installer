@@ -15,6 +15,7 @@ echo "-------------------------------"
 # homebrew
 echo "- Homebrew packages -"
 dependencies=(
+    "luarocks"
     "ranger"
     "fd"
     "git-delta"

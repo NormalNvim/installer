@@ -16,6 +16,8 @@ echo "--------------------------------------"
 # fedora
 echo "- Fedora packages -"
 dependencies=(
+    "luarocks/luarocks/"
+    "ranger/ranger"
     "rust-fd-find/fd-find"
     "rust-git-delta/git-delta"
     "rustup/rustup"
