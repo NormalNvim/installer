@@ -19,7 +19,7 @@ dependencies=(
     "ranger"
     "fd"
     "git-delta"
-    "rustup-init"
+    "rustup"
     "yarn"
 )
 check_homebrew_dependencies "${dependencies[@]}" || exit 1
