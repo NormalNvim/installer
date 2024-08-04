@@ -17,20 +17,12 @@ echo "--------------------------------------"
 echo "- Fedora packages -"
 dependencies=(
     "luarocks/luarocks/"
-    "ranger/ranger"
     "rust-fd-find/fd-find"
     "rust-git-delta/git-delta"
     "rustup/rustup"
     "pytest/python3-pytest"
 )
 check_fedora_dependencies "${dependencies[@]}" || exit 1
-
-# python
-printf '\n%s\n' "- Python packages -"
-dependencies=(
-    "pynvim" # Will probably provoke a warning on ubuntu, since PEP 688
-)
-check_python_dependencies "${dependencies[@]}" || exit 1
 
 # npm
 printf '\n%s\n' "- NPM packages -"
@@ -45,6 +37,7 @@ printf '\n%s\n' "- Cargo packages -"
 dependencies=(
     "cargo-nextest"
     "grcov"
+    "yazi-fm"
 )
 check_cargo_dependencies "${dependencies[@]}" || exit 1
 printf '\n\n\n\n'

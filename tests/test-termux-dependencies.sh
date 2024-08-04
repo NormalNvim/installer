@@ -18,9 +18,9 @@ dependencies=(
     "tur-repo" # This enable the termux user repository
     "luarocks"
     "python"
-    "ranger"
     "fd"
     "git-delta"
+    "yazi"
     "yarn"
 )
 check_termux_dependencies "${dependencies[@]}" || exit 1
@@ -28,7 +28,6 @@ check_termux_dependencies "${dependencies[@]}" || exit 1
 # python
 printf '\n%s\n' "- Python packages -"
 dependencies=(
-    "pynvim"
     "pytest"
 )
 check_python_dependencies "${dependencies[@]}" || exit 1

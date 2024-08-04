@@ -20,9 +20,7 @@ echo "- Ubuntu packages -"
 dependencies=(
     "luarocks"
     "yarn"
-    "ranger"
     "rust-fd-find"
-    "python-pynvim"
     "python-pytest"
     "delta"
     "rust-grcov"
@@ -36,10 +34,14 @@ dependencies=(
     "jest"
 )
 check_npm_dependencies "${dependencies[@]}" || exit 1
+
+# cargo
+printf '\n%s\n' "- Cargo packages -"
+dependencies=(
+    "yazi-fm"
+)
+check_cargo_dependencies "${dependencies[@]}" || exit 1
 printf '\n\n\n\n'
-
-
-
 
 echo "--------------------------"
 echo "Compiler.nvim dependencies"

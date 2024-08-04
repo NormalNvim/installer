@@ -18,12 +18,11 @@ echo "- Pacman packages -"
 dependencies=(
     "luarocks"
     "python"
-    "python-pynvim"
-    "ranger"
     "fd"
     "git-delta"
     "grcov"
     "rustup"
+    "yazi"
     "yarn"
     "python-pytest"
 )
