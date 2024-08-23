@@ -27,4 +27,4 @@ And check if there is any dependency that doesn't exist anymore. Send a PR to th
 
 ## Roadmap
 * We currently support the package names shipped with the latest stable release of all distros, but as new versions are released, we could version the installer (ubuntu 22.04, etc).
-* A (probably) easier alternative would be to distribute NormalNvim as flatpak. That would ensure a optimal user experience on any system.
+* A (probably) easier alternative would be to distribute NormalNvim as flatpak/docker. That would ensure a optimal user experience on any system.
