@@ -4,7 +4,7 @@ Shell script to install NormalNvim in a single step.
 ## Supported operative systems
 
 * Arch based Linux distros
-* Ubuntu based Linux distros
+* Ubuntu based Linux distros / WLS
 * Fedora based Linux distros
 * MacOS (homebrew)
 * Termux
@@ -13,7 +13,7 @@ Shell script to install NormalNvim in a single step.
 The fact a installer has a GitHub action, mean the installer is very stable; If any dependency cease to exist on the repositories of a distro, we will inmediatelly know.
 
 * [Arch](https://github.com/NormalNvim/installer/blob/main/tests/test-arch-dependencies.sh)
-* [Ubuntu](https://github.com/NormalNvim/installer/blob/main/tests/test-ubuntu-dependencies.sh)
+* [Ubuntu](https://github.com/NormalNvim/installer/blob/main/tests/test-ubuntu-dependencies.sh) / WSL
 * [MacOs](https://github.com/NormalNvim/installer/blob/main/tests/test-macos-dependencies.sh)
 * [Termux](https://github.com/NormalNvim/installer/blob/main/tests/test-termux-dependencies.sh)
 * [Fedora](https://github.com/NormalNvim/installer/blob/main/tests/test-fedora-dependencies.sh)
