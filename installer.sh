@@ -136,7 +136,7 @@ if [ -z "$answer_lowercase" ] || [ "$answer_lowercase" = "y" ] || [ "$answer_low
   #############################################################################
   elif [ "$IS_MACOS" = "true" ]; then
     echo "MacOS detected."
-    sudo brew install "luarocks" "fd" "git-delta" "rustup" "yarn" "gcc" "binutils" "dotnet" "mono" "openjdk" "dart-sdk" "kotlin" "elixir" "node" "typescript" "make" "rust" "go" "nasm" "r" "ruby" "perl" "lua" "swift" "pyinstaller" "doxygen"; sudo brew install --cask "dotnet-sdk" "flutter"; pip install "pytest" "Nuitka"; yarn add global "jest" "jsdoc" "typedoc"; cargo install "yazi-fm" "cargo-nextest" "grcov"; go install "golang.org/x/tools/cmd/godoc@latest"
+    brew install "luarocks" "fd" "git-delta" "rustup" "yarn" "gcc" "binutils" "dotnet" "mono" "openjdk" "dart-sdk" "kotlin" "elixir" "node" "typescript" "make" "rust" "go" "nasm" "r" "ruby" "perl" "lua" "swift" "pyinstaller" "doxygen"; brew install --cask "dotnet-sdk" "flutter"; pip install "pytest" "Nuitka"; yarn add global "jest" "jsdoc" "typedoc"; cargo install "yazi-fm" "cargo-nextest" "grcov"; go install "golang.org/x/tools/cmd/godoc@latest"
 
 
 
