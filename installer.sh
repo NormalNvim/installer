@@ -115,7 +115,7 @@ if [ -z "$answer_lowercase" ] || [ "$answer_lowercase" = "y" ] || [ "$answer_low
     # INSTALL DEPENDENCIES
     # --------------------
     if [ -n "$AUR_CMD" ]; then
-      eval "$AUR_CMD" "luarocks" "python" "yazi" "fd" "git-delta" "grcov" "rustup" "yarn" "python-pytest" "gcc" "binutils" "dotnet-runtime" "dotnet-sdk" "aspnet-runtime" "mono" "jdk-openjdk" "kotlin" "elixir" "npm" "nodejs" "typescript" "make" "go" "nasm" "r" "nuitka" "python" "ruby" "perl" "lua" "pyinstaller" "swift-bin" "flutter-bin" "gcc-fortran" "fortran-fpm-bin" "doxygen" "ldoc" "ruby-yard"; yarn global add "jest" "jsdoc" "typedoc"; cargo install "yazi-fm" "cargo-nextest"; go install "golang.org/x/tools/cmd/godoc@latest"
+      eval "$AUR_CMD" "luarocks" "python" "yazi" "fd" "git-delta" "grcov" "rust" "yarn" "python-pytest" "gcc" "binutils" "dotnet-runtime" "dotnet-sdk" "aspnet-runtime" "mono" "jdk-openjdk" "kotlin" "elixir" "npm" "nodejs" "typescript" "make" "go" "nasm" "r" "nuitka" "python" "ruby" "perl" "lua" "pyinstaller" "swift-bin" "flutter-bin" "gcc-fortran" "fortran-fpm-bin" "doxygen" "ldoc" "ruby-yard"; yarn global add "jest" "jsdoc" "typedoc"; cargo install "yazi-fm" "cargo-nextest"; go install "golang.org/x/tools/cmd/godoc@latest"
     else
       echo "ERROR: You must have 'paru' or 'yay' installed so we can use the AUR."
     fi
@@ -127,7 +127,7 @@ if [ -z "$answer_lowercase" ] || [ "$answer_lowercase" = "y" ] || [ "$answer_low
   #############################################################################
   elif [ "$IS_UBUNTU" = "true" ]; then
     echo "Ubuntu detected."
-    sudo apt update; sudo apt install --install-if-missing "luarocks" "yarn" "rust-fd-find" "python-pytest" "delta" "rust-grcov" "rustup" "gcc-defaults" "binutils" "dotnet8" "monodevelop" "java-common" "nasm" "r-base" "rustc" "golang" "python" "ruby" "perl" "lua5.3" "kotlin" "elixir" "make" "nodejs" "npm" "node-typescript" "nuitka" "doxygen" "yard"; pip install "pyinstaller"; yarn global add "jest" "jsdoc" "typedoc"; cargo install "yazi-fm"; go install "golang.org/x/tools/cmd/godoc@latest"; sudo snap install --classic "flutter"
+    sudo apt update; sudo apt install --install-if-missing "luarocks" "yarn" "rust-fd-find" "python-pytest" "delta" "rust-grcov" "rust" "gcc-defaults" "binutils" "dotnet8" "monodevelop" "java-common" "nasm" "r-base" "rustc" "golang" "python" "ruby" "perl" "lua5.3" "kotlin" "elixir" "make" "nodejs" "npm" "node-typescript" "nuitka" "doxygen" "yard"; pip install "pyinstaller"; yarn global add "jest" "jsdoc" "typedoc"; cargo install "yazi-fm"; go install "golang.org/x/tools/cmd/godoc@latest"; sudo snap install --classic "flutter"
 
 
 
@@ -136,7 +136,7 @@ if [ -z "$answer_lowercase" ] || [ "$answer_lowercase" = "y" ] || [ "$answer_low
   #############################################################################
   elif [ "$IS_MACOS" = "true" ]; then
     echo "MacOS detected."
-    brew install "luarocks" "fd" "git-delta" "rustup" "yarn" "gcc" "binutils" "dotnet" "mono" "openjdk" "dart-sdk" "kotlin" "elixir" "node" "typescript" "make" "rust" "go" "nasm" "r" "ruby" "perl" "lua" "swift" "pyinstaller" "doxygen"; brew install --cask "dotnet-sdk" "flutter"; pip install "pytest" "Nuitka"; yarn add global "jest" "jsdoc" "typedoc"; cargo install "yazi-fm" "cargo-nextest" "grcov"; go install "golang.org/x/tools/cmd/godoc@latest"
+    brew install "luarocks" "fd" "git-delta" "rust" "yarn" "gcc" "binutils" "dotnet" "mono" "openjdk" "dart-sdk" "kotlin" "elixir" "node" "typescript" "make" "rust" "go" "nasm" "r" "ruby" "perl" "lua" "swift" "pyinstaller" "doxygen"; brew install --cask "dotnet-sdk" "flutter"; pip install "pytest" "Nuitka"; yarn add global "jest" "jsdoc" "typedoc"; cargo install "yazi-fm" "cargo-nextest" "grcov"; go install "golang.org/x/tools/cmd/godoc@latest"
 
 
 
@@ -154,7 +154,7 @@ if [ -z "$answer_lowercase" ] || [ "$answer_lowercase" = "y" ] || [ "$answer_low
   #############################################################################
   elif [ "$IS_FEDORA" = "true" ]; then
     echo "Fedora detected."
-    sudo dnf install "luarocks" "rust-fd-find" "rust-git-delta" "rustup" "python3-pytest" "gcc" "binutils" "dotnet6.0" "dotnet-runtime-6.0" "dotnet-sdk-6.0" "aspnetcore-runtime-6.0" "mono-complete" "java-21-openjdk" "elixir" "nodejs" "npm" "typescript" "make" "golang" "nasm" "R-rlang" "ruby" "perl" "lua" "swift-lang" "gcc-gfortran" "doxygen" "lua-ldoc" "rubygem-yard"; pip install "pytest" "Nuitka" "pyinstaller"; npm install -g "yarn" "jest" "typescript" "jsdoc" "typedoc"; cargo install "yazi-fm" "cargo-nextest" "grcov"; go install "golang.org/x/tools/cmd/godoc@latest"
+    sudo dnf install "luarocks" "rust-fd-find" "rust-git-delta" "rust" "python3-pytest" "gcc" "binutils" "dotnet6.0" "dotnet-runtime-6.0" "dotnet-sdk-6.0" "aspnetcore-runtime-6.0" "mono-complete" "java-21-openjdk" "elixir" "nodejs" "npm" "typescript" "make" "golang" "nasm" "R-rlang" "ruby" "perl" "lua" "swift-lang" "gcc-gfortran" "doxygen" "lua-ldoc" "rubygem-yard"; pip install "pytest" "Nuitka" "pyinstaller"; npm install -g "yarn" "jest" "typescript" "jsdoc" "typedoc"; cargo install "yazi-fm" "cargo-nextest" "grcov"; go install "golang.org/x/tools/cmd/godoc@latest"
 
 
 
